@@ -1,0 +1,37 @@
+:root{
+    --primary: #757575;
+    --secondary: darkred;
+}
+
+body{
+    font-family: 'Nova Square', cursive;
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--primary);
+}
+
+a:link , a:visited{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+a:hover{
+    color: var(--secondary);
+}
+
+.logo{
+    height: 90px;
+}
+
+.bgHome{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255,255,255,1) 100%), url(./media/mountains2.png), url(./media/switzerland-862870_1920.jpg);
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.titolo{
+    font-family: 'Nova Square', cursive;
+    color: var(--secondary);
+    letter-spacing: 90px;
+
+}
