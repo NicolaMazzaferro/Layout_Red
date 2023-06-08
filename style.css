@@ -1,12 +1,19 @@
 :root{
     --primary: #757575;
     --secondary: darkred;
+    --alternative: #C67F7F;
+    --bgcolor: #ececec;
 }
 
 body{
     font-family: 'Nova Square', cursive;
     font-family: 'Rajdhani', sans-serif;
     color: var(--primary);
+    background-color: var(--bgcolor);
+}
+
+h1,h2,h3,h4{
+    color: var(--secondary);
 }
 
 a:link , a:visited{
@@ -19,7 +26,7 @@ a:hover{
 }
 
 .logo{
-    height: 90px;
+    height: 110px;
 }
 
 .bgHome{
@@ -32,12 +39,113 @@ a:hover{
 
 .titolo{
     font-family: 'Nova Square', cursive;
-    color: var(--secondary);
+    
     letter-spacing: 6rem;
     font-size: 100px;
 }
 
+.quotes{
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--primary);
+    font-size: 40px;
+}
 
+
+.quotes::before{
+    content: open-quote;
+    color: var(--secondary);
+    font-size: 150px;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: -50px;
+    rotate: 10deg; 
+}
+
+
+.quotes::after{
+    content: close-quote;
+    color: var(--secondary);
+    font-size: 150px;
+    position: absolute;
+    margin-top: -15px;
+    rotate: 10deg;
+}
+
+.iconCustom{
+    height: 500px;
+    color: var(--secondary);
+    font-size: 50px;
+}
+
+.iconCustom p{
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.line{
+    border-bottom: 4px solid var(--secondary);
+    width: 300px;
+    position: relative;  
+    align-items: center;
+    margin: 70px;
+}
+
+.line::before{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: var(--bgcolor);
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    position: absolute;
+    left: 130px;
+    bottom: -23px;
+}
+
+.articoliCustom{
+    width: 800px;
+}
+
+.buttonCentrale{
+    background: var(--secondary);
+    color: white;
+    width: 300px;
+    height: 80px;
+    border: none;
+    font-size: 40px;
+    
+}
+
+.secondoBg{
+    height: 100vh;
+    background-image: url(./media/trees2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imgTimeline{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    height: 1000px;
+    
+}
+
+.barraTimeline{
+    border-left: 4px solid var(--secondary);
+    margin-left: 50px;
+}
+
+.timeline::before{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+}
 
 
 
@@ -52,6 +160,11 @@ a:hover{
     }
 }
 
+@media screen and (max-width:977px) {
+    #articoliCustomMobile{
+        margin-top: 550px;
+    }
+}
 
 @media screen and (max-width:579px) {
     .titolo{
