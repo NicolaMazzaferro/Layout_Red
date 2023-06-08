@@ -160,6 +160,11 @@ a:hover{
     color: var(--secondary);
 }
 
+.benefitImg{
+    height: 200px;
+    width: 200px;
+}
+
 
 
 
