@@ -102,9 +102,6 @@ a:hover{
     bottom: -23px;
 }
 
-.articoliCustom{
-    width: 800px;
-}
 
 .buttonCentrale{
     background: var(--secondary);
@@ -117,26 +114,21 @@ a:hover{
 }
 
 .secondoBg{
-    height: 100vh;
     background-image: url(./media/trees2.png);
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.imgTimeline{
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    height: 1000px;
-    
+    background-position: bottom;
+    height: 120vh;
 }
 
 .barraTimeline{
     border-left: 4px solid var(--secondary);
     margin-left: 50px;
+    position: relative;
 }
 
 .timeline::before{
+    
     content: '';
     width: 40px;
     height: 40px;
@@ -144,7 +136,28 @@ a:hover{
     border: 2px solid var(--secondary);
     border-radius: 50%;
     position: absolute;
-    left: 30px;
+    left: -25px;
+}
+
+.terzoBg{
+    background-image: url(./media/single.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.bordoDoppio{
+    height: 80px;
+    width: 80px;
+    background-image: url(https://picsum.photos/200/300);
+    background-position: center;
+    border: 3px solid var(--secondary); 
+    padding:4px; 
+    background:#EAEFFD;
+    border-radius: 50%;
+}
+
+.iconSocial{
+    color: var(--secondary);
 }
 
 
@@ -172,4 +185,20 @@ a:hover{
         letter-spacing: 2rem;
         padding-left: 30px;  
     }
+
+    .buttonCentrale{
+        margin-bottom: 50px;
+    }
+
+    
+}
+
+@media screen and (max-width:768px) {
+    
+    .secondoBg{
+        height: auto;
+        background-image: none;
+    }
+
+    
 }
