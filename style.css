@@ -67,8 +67,6 @@ a:hover{
     color: var(--secondary);
     font-size: 120px;
     position: absolute;
-    right: -45px;
-    bottom: -90px;
     rotate: 25deg;  
 }
 
@@ -112,7 +110,7 @@ a:hover{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 120vh;
+    height: 80vh;
 }
 
 .barraTimeline{
@@ -135,7 +133,8 @@ a:hover{
 .terzoBg{
     background-image: url(./media/single.png);
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right 150px;
+    
 }
 
 .bordoDoppio{
@@ -174,12 +173,77 @@ a:hover{
     color: var(--alternative);
 }
 
+.returnHome{
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+}
+
+.buttonHome{
+    color: black;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 
+
+/* ANIMATION */
+
+.animationTitle{
+    animation-name: animationTitle;
+    animation-duration: 5s;
+}
+
+@keyframes animationTitle{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.animationZoom{
+    transition: transform .2s;
+
+}
+
+.animationZoom:hover{
+    transform: scale(1.5);
+}
+
+/* INIZIO ANIMAZIONE BUTTON */
+
+.animationBtn {
+    transition: all 0.35s;
+    position: relative;
+  }
+
+  .animationBtn strong{
+    position: relative;
+    z-index: 2;
+  }
+
+  .animationBtn::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transition: all .35s;
+  }
+
+  .animationBtn:hover{
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+  }
+
+  .animationBtn:hover::after{
+    width: 100%;
+  }
+
+/* FINE ANIMAZIONE BUTTON */
 
 
 /* MEDIA QUERY */
-
 
 @media screen and (max-width:900px) {
     
