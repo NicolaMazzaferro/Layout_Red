@@ -6,7 +6,6 @@
 }
 
 body{
-    font-family: 'Nova Square', cursive;
     font-family: 'Rajdhani', sans-serif;
     color: var(--primary);
     background-color: var(--bgcolor);
@@ -16,13 +15,17 @@ h1,h2,h3,h4{
     color: var(--secondary);
 }
 
+h1,h2{
+    font-family: 'Nova Square', cursive;
+}
+
 a:link , a:visited{
     text-decoration: none;
     color: var(--primary);
 }
 
 a:hover{
-    color: var(--secondary);
+    color: var(--alternative);
 }
 
 .logo{
@@ -38,70 +41,62 @@ a:hover{
 }
 
 .titolo{
-    font-family: 'Nova Square', cursive;
-    
+    height: 100%;
     letter-spacing: 6rem;
     font-size: 100px;
 }
 
 .quotes{
-    font-family: 'Rajdhani', sans-serif;
-    color: var(--primary);
-    font-size: 40px;
+    position: relative;
 }
-
 
 .quotes::before{
+    font-family: 'Nova Square', cursive;
     content: open-quote;
     color: var(--secondary);
-    font-size: 150px;
+    font-size: 120px;
     position: absolute;
-    margin-left: -60px;
-    margin-top: -50px;
-    rotate: 10deg; 
+    top: -40px;
+    left: -70px;
+    rotate: 25deg;  
 }
-
 
 .quotes::after{
+    font-family: 'Nova Square', cursive;
     content: close-quote;
     color: var(--secondary);
-    font-size: 150px;
+    font-size: 120px;
     position: absolute;
-    margin-top: -15px;
-    rotate: 10deg;
+    right: -45px;
+    bottom: -90px;
+    rotate: 25deg;  
 }
 
-.iconCustom{
-    height: 500px;
+.colorIcon{
     color: var(--secondary);
-    font-size: 50px;
-}
-
-.iconCustom p{
-    color: var(--primary);
     font-size: 30px;
 }
 
 .line{
+    color: black;
+    font-size: 25px;
+    padding-bottom: 30px;
     border-bottom: 4px solid var(--secondary);
-    width: 300px;
-    position: relative;  
-    align-items: center;
-    margin: 70px;
+    position: relative;
+    display: inline;
 }
 
 .line::before{
     content: '';
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color: var(--bgcolor);
     border: 2px solid var(--secondary);
     border-radius: 50%;
     position: absolute;
-    left: 130px;
-    bottom: -23px;
-}
-
+    top: 50px;
+    right: 75px;
+} 
 
 .buttonCentrale{
     background: var(--secondary);
@@ -109,8 +104,7 @@ a:hover{
     width: 300px;
     height: 80px;
     border: none;
-    font-size: 40px;
-    
+    font-size: 40px; 
 }
 
 .secondoBg{
@@ -123,20 +117,19 @@ a:hover{
 
 .barraTimeline{
     border-left: 4px solid var(--secondary);
-    margin-left: 50px;
     position: relative;
 }
 
 .timeline::before{
     
     content: '';
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     background-color: white;
     border: 2px solid var(--secondary);
     border-radius: 50%;
     position: absolute;
-    left: -25px;
+    left: -15px;
 }
 
 .terzoBg{
@@ -173,41 +166,75 @@ a:hover{
     color: white;
 }
 
+.footerLink:link, .footerLink:visited {
+    color: white;
+}
+
+.footerLink:hover{
+    color: var(--alternative);
+}
+
 
 
 
 
 /* MEDIA QUERY */
 
-@media screen and (max-width:992px) {
-    .titolo{
-        font-size: 50px;
-        letter-spacing: 5rem;  
-    }
-}
 
-@media screen and (max-width:977px) {
+@media screen and (max-width:900px) {
+    
+    .titolo{
+        font-size: 80px;
+        letter-spacing: 3rem;  
+    }
+    
     #articoliCustomMobile{
-        margin-top: 550px;
+        display: inline-block;
     }
-}
-
-@media screen and (max-width:579px) {
-    .titolo{
-        font-size: 50px;
-        letter-spacing: 2rem;
-        padding-left: 30px;  
-    }
-
-    .buttonCentrale{
-        margin-bottom: 50px;
-    }   
-}
-
-@media screen and (max-width:768px) {
     
     .secondoBg{
         height: auto;
         background-image: none;
+    }
+
+    .line{
+        font-size: 15px;
+    }
+
+    .line::before{
+        width: 20px;
+        height: 20px;
+        top: 40px;
+        right: 45px; 
+    } 
+}
+
+@media screen and (max-width:770px) {
+        .line{
+        font-size: 25px;
+        
+    }
+    
+    .line::before{
+        width: 30px;
+        height: 30px;
+        top: 50px;
+        right: 75px;
+    }
+
+    .colorIcon{
+        padding-top: 50px;
+    }
+
+}
+
+@media screen and (max-width:579px) {
+    .titolo{
+        font-size: 80px;
+        letter-spacing: 1rem;
+    }
+
+    .buttonCentrale{
+        margin-bottom: 50px;
     } 
 }
