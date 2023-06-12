@@ -175,13 +175,13 @@ a:hover{
 
 .returnHome{
     position: fixed;
-    bottom: 50px;
-    right: 100px;
+    bottom: 20px;
+    right: 20px;
 }
 
 .buttonHome{
     color: black;
-    font-size: 60px;
+    font-size: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
